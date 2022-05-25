@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/recados.css">
+    <title>Anotações</title>
+</head>
+
+<body>
+
+
+
+    <main class="box_notas">
+        <h1>Minhas Anotações</h1>
+        <section id="cx_login">
+            <div>
+                <form id="infos-prod">
+                    <label class="textfield" for="titulo">Título: </label>
+                    <input type="text" id="titulo" name="titulo" placeholder="nota" />
+
+                    <label class="textfield" for="anotacao">Anotação: </label>
+                    <input type="text" id="anotacao" name="anotacao" placeholder="texto" />
+                    <!-- 
+                    <input type="checkbox" name="prime" id="prime">
+                    <label class="textfield" for="prime">É prime?</label> -->
+                    <input type="hidden" name="idx" id="idx" value="novo" />
+                    <input type="submit" value="Salvar">
+                    <input type="button" id="sair" value="Sair">
+                </form>
+
+                <div id="msg-erro"></div>
+            </div>
+
+            <br><br>
+
+            <table>
+
+                <!-- <caption>
+                    <h3>Lista de produtos</h3>
+                </caption> -->
+
+                <thead>
+                    <tr>
+                        <th>Nº</th>
+                        <th>Título da Nota</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="./js/recados.js"></script>
+</body>
+
+</html>
