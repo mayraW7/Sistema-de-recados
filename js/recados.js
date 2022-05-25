@@ -1,9 +1,9 @@
-const form = document.querySelector("#infos-prod");
+const form = document.querySelector("#infos-nota");
 const divErro = document.querySelector("#msg-erro");
 const tabela = document.querySelector("#tbody");
 let idx = form.idx.value; 
 let usuarioId = Number(sessionStorage.getItem('logado'));
-//LOGCHECKED
+
 const session = localStorage.getItem("session");
 
 checkLogged();
@@ -19,22 +19,16 @@ function checkLogged (){
         return;
     }
 
-    /*const dataUser = localStorage.getItem(logado);
-    if(dataUser){
-        data = JSON.parse(dataUser);
-    }*/
-
 }
-
 
 console.log(usuarioId);
 
-//salva no localstorage
+
 const atualizarLocalStorage = (notas) => {
     localStorage.setItem("notas", JSON.stringify(notas));
 };
 
-//recupera de la
+
 const recuperarLocalStorage = () => {
     const notas = JSON.parse(localStorage.getItem("notas") || "[]");
     return notas;
@@ -45,16 +39,14 @@ const salvarNota = (event) => {
     console.log("passou pelo evento");
     divErro.innerHTML = "";
     const titulo = form.titulo.value;
-    const anotacao = (form.anotacao.value);
-    // const prime = form.prime.checked;
+    const anotacao = form.anotacao.value;
+
     const erros = [];
 
     if (!titulo || titulo.length < 2) {
         erros.push("<p>Título inválido!</p>");
     }
-    // if (!anotacao || anotacao <= 0) {
-    //     erros.push("<p>Sem descrição!</p>");
-    // }
+
     if (erros.length > 0) {
         divErro.innerHTML = erros.join(" ");
         return;
@@ -64,16 +56,14 @@ const salvarNota = (event) => {
 
     if(idx == "novo"){
         const notas = recuperarLocalStorage();
-        let i = 1;
         let idt = 0;
         for(const pro of notas){
             if(pro.usuarioId === usuarioId){
-                //i+=1;
                 idt = Number(pro.id);
             }
         }
-//produtos.push({ id: produtos.length, nome, preco, prime, usuarioId});
-        produtos.push({ id: idt+=1, titulo, anotacao, usuarioId});
+
+        notas.push({ id: idt+=1, titulo, anotacao, usuarioId});
         atualizarLocalStorage(notas);
         preencherTabela();
         form.reset();
@@ -96,12 +86,12 @@ const preencherTabela = () => {
     tabela.innerHTML = "";
     for (const nota of notas) {
 
-        if(produto.usuarioId === usuarioId){
+        if(nota.usuarioId === usuarioId){
             tabela.innerHTML += `
         <tr>
             <th scope="row">${nota.id}</th>
-            <td>R$ ${titulo.nome}</td>
-            <td>R$ ${anotacao.preco}</td>
+            <td>${nota.titulo}</td>
+            <td>${nota.anotacao}</td>
             <td>
                 <img type="button" width="60" src="./img/delet.svg" onclick="removerNota(${nota.id})" />
                 <img type="button" width="60" src="./img/editar.svg" onclick="atualizaNota(${nota.id})" />
@@ -132,11 +122,11 @@ function editar(idx, nota){
 
 const atualizaNota = (id)=>{
     const notas = recuperarLocalStorage();
-    const indexNota = notass.findIndex((nota) => nota.id === id);
-    //console.log(produtos[indexProduto]);
+    const indexNota = notas.findIndex((nota) => nota.id === id);
+
     form.titulo.value = notas[indexNota].titulo;
     form.anotacao.value = notas[indexNota].anotacao;
-    // form.prime.value = produtos[indexProduto].prime;
+
     idx = id;
     console.log(idx)
 }
