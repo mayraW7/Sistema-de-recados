@@ -93,8 +93,8 @@ const preencherTabela = () => {
             <td>${nota.titulo}</td>
             <td>${nota.anotacao}</td>
             <td>
-                <img type="button" width="60" src="./img/delet.svg" onclick="removerNota(${nota.id})" />
-                <img type="button" width="60" src="./img/editar.svg" onclick="atualizaNota(${nota.id})" />
+                <img type="button" width="50" src="./img/delet.svg" onclick="removerNota(${nota.id})" />
+                <img type="button" width="50" src="./img/editar.svg" onclick="atualizaNota(${nota.id})" />
             </td>
         </tr>
     `;
