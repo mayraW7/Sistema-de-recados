@@ -18,10 +18,14 @@
         <section id="cx_login">
             <div>
                 <form id="infos-nota">
-                    <label for="titulo">Título: </label>
-                    <input type="text" id="titulo" name="titulo" placeholder="nota" />
-                    <label for="anotacao">Anotação: </label>
-                    <input type="text" id="anotacao" name="anotacao" placeholder="texto" />
+                    <div class="textfield">
+                        <label for="titulo">Título: </label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Digite o título da nota" />
+                    </div>
+                    <div class="textfield">
+                        <label for="anotacao">Anotação: </label>
+                        <input type="text" id="anotacao" name="anotacao" placeholder="Escreva aqui sua nota..." />
+                    </div>
                     <input type="hidden" name="idx" id="idx" value="novo" />
                     <input type="submit" value="Salvar">
                     <input type="button" id="sair" value="Sair">

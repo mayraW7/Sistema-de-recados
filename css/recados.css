@@ -52,10 +52,40 @@ body {
     cursor: pointer;
   }
   
-  
+
+  .textfield > input {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f99cf0;
+    color: #ffffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px  #cb1d8856;
+    outline: none;
+    box-sizing: border-box;   
+}
+
+
+
+.textfield > label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+
+.textfield > input::placeholder {
+  color:  #f0ffffde;
+}
+
+
   table, th, td {  
-    border: 1px solid #ffffff;  
+    border: 1px solid #ffffff; 
+    border-radius: 5px; 
     border-collapse: collapse; 
+    
      
   }  
   
@@ -63,6 +93,7 @@ body {
     padding: 10px; 
     width: 200px;
     text-align: center;
+    color: #ffffff;
   }  
   
   table th {  
@@ -75,34 +106,37 @@ body {
   }
   
   img{
-    margin: 0 10px 0 10px;
-    cursor: pointer;
+    margin: 0 15px 0 10px;
+    cursor: pointer; 
   }
   
 #sair {
         all: unset;
         background-color: #f99cf0;
-        color: white;
+        color: #ffffff;
         border: none;
         border-radius: 40px;
-        width: 10%;
-        margin: 5px;
-        padding: 10px;
+        width: 15%;
+        margin: 20px;
+        padding: 15px;
         cursor: pointer;
         text-align: center;
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 2vw;
 }
 
   input[type=submit]{
     all: unset;
     background-color: #f99cf0;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 40px;
-    width: 10%;
-    margin: 5px;
-    padding: 10px;
+    width: 15%;
+    padding: 15px;
     cursor: pointer;
     text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2vw;
   }
   
   div#msg-erro{
