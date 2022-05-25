@@ -132,7 +132,6 @@
     width: 80%;
     padding: 16px;
     margin: 25px;
-    margin-bottom: 13px;
     border: none;
     border-radius: 50px;
     outline: none;
@@ -142,7 +141,6 @@
     color: #f3b8ee;
     background:#ff0073;
     cursor: pointer;
-    justify-content: center;
 }
 
 #criar-conta {
