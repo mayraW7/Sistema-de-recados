@@ -93,14 +93,14 @@
 .textfield > input {
     width: 100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 15px;
     background: #f99cf0;
     color: #ffffffde;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px  #cb1d8856;
     outline: none;
     box-sizing: border-box;   
+    box-shadow: 0px 10px 10px -1px #410431cd;
 }
 
 .textfield > label {
@@ -125,7 +125,7 @@
     color: #f3b8ee;
     background:#ff0073;
     cursor: pointer;
-    
+    box-shadow: 0px 10px 10px -1px #410431cd;
 }
 
 .btn-cadastrar {
@@ -141,6 +141,7 @@
     color: #f3b8ee;
     background:#ff0073;
     cursor: pointer;
+    box-shadow: 0px 10px 10px -1px #410431cd;
 }
 
 #criar-conta {
@@ -156,5 +157,6 @@
     color: #f3b8ee;
     background:#fd2989;
     cursor: pointer;
+    box-shadow: 0px 10px 10px -1px #410431cd;
 }
 
